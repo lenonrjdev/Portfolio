@@ -1,4 +1,4 @@
-# Ateliux Landing Page — Hero, Portfolio e Design Showcase Clean
+# Ateliux Landing Page — Seções Integradas
 
 Landing page em Next.js 16, React 19, TypeScript, Tailwind CSS v4 e Poppins.
 
@@ -6,9 +6,16 @@ Landing page em Next.js 16, React 19, TypeScript, Tailwind CSS v4 e Poppins.
 
 1. Hero principal da Ateliux.
 2. Portfólio com três carrosséis independentes de cinco imagens.
-3. Design Showcase inspirado na referência enviada, com fundo preto, conteúdo editorial à esquerda, título vertical central e retrato monocromático à direita. Nesta versão, toda a escala tipográfica foi reduzida e os pesos, contrastes e espaçamentos foram refinados para uma composição mais clean.
+3. Design Showcase com conteúdo editorial, título vertical e retrato monocromático.
 
-A terceira seção não adiciona menu, ícones sociais ou controles laterais próprios. Ela reutiliza somente a identidade fixa global do projeto e não possui a seta lateral da referência.
+## Transições visuais
+
+- Todas as seções compartilham o mesmo fundo preto contínuo.
+- A textura e a iluminação ambiente são globais, evitando mudanças bruscas entre blocos.
+- As bordas e linhas externas que separavam as seções foram removidas.
+- Gradientes superiores e inferiores unem uma seção à seguinte sem criar faixas visíveis.
+- A fotografia da seção Design Showcase desaparece suavemente no preto nas laterais, no topo e na base.
+- Foi mantido o scroll suave para os links internos do menu.
 
 ## Executar
 
@@ -34,4 +41,4 @@ content/
 public/
 ```
 
-Todo o estilo visual é aplicado com classes Tailwind nos componentes. O arquivo `app/tailwind.css` contém apenas a importação do Tailwind.
+Todo o estilo visual está em classes Tailwind nos componentes. O arquivo `app/tailwind.css` contém somente a importação do Tailwind.

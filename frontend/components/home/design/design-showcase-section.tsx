@@ -6,17 +6,13 @@ export function DesignShowcaseSection() {
     <section
       id="design"
       aria-labelledby="design-showcase-title"
-      className="relative isolate min-h-screen min-h-svh w-full overflow-hidden bg-[#08080a]"
+      className="relative isolate -mt-px min-h-screen min-h-svh w-full overflow-hidden bg-transparent"
     >
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 z-[-4] bg-[radial-gradient(circle_at_69%_46%,rgba(255,255,255,0.035),transparent_34%),linear-gradient(180deg,#09090b_0%,#070709_100%)]"
+        className="pointer-events-none absolute inset-0 z-[-4] bg-[radial-gradient(circle_at_69%_46%,rgba(255,255,255,0.035),transparent_34%)]"
       />
 
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 z-[-3] bg-[repeating-radial-gradient(circle_at_0_0,transparent_0,rgba(255,255,255,0.26)_0.42px,transparent_0.72px,transparent_4px)] bg-[length:6px_6px] opacity-[0.012]"
-      />
 
       <div
         aria-hidden="true"
@@ -34,7 +30,7 @@ export function DesignShowcaseSection() {
 
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,#08080a_0%,rgba(8,8,10,0.86)_10%,rgba(8,8,10,0.26)_36%,rgba(8,8,10,0.08)_68%,rgba(8,8,10,0.42)_100%),linear-gradient(180deg,rgba(0,0,0,0.18)_0%,transparent_35%,rgba(0,0,0,0.38)_100%)]"
+          className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,#08080a_0%,rgba(8,8,10,0.88)_10%,rgba(8,8,10,0.28)_36%,rgba(8,8,10,0.08)_68%,rgba(8,8,10,0.46)_100%),linear-gradient(180deg,#08080a_0%,rgba(8,8,10,0.62)_7%,transparent_20%,transparent_80%,rgba(8,8,10,0.64)_93%,#08080a_100%)]"
         />
 
         <div
@@ -42,6 +38,16 @@ export function DesignShowcaseSection() {
           className="pointer-events-none absolute inset-0 opacity-[0.07] [background-image:radial-gradient(circle,rgba(255,255,255,0.7)_0.55px,transparent_0.7px)] [background-size:5px_5px]"
         />
       </div>
+
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 top-0 z-20 h-[17vh] bg-[linear-gradient(180deg,#08080a_0%,rgba(8,8,10,0.76)_38%,transparent_100%)]"
+      />
+
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-[18vh] bg-[linear-gradient(180deg,transparent_0%,rgba(8,8,10,0.55)_58%,#08080a_100%)]"
+      />
 
       <div className="relative z-10 flex min-h-screen min-h-svh items-center pl-[11.4vw] pr-[5vw] max-lg:pl-[9.5vw] max-md:items-end max-md:px-6 max-md:pb-[15vh]">
         <div className="relative w-[39vw] max-w-[680px] -translate-y-[1vh] max-lg:w-[46vw] max-md:w-full max-md:translate-y-0">
@@ -120,10 +126,6 @@ export function DesignShowcaseSection() {
         {designShowcaseContent.date}
       </p>
 
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 z-30 border border-white/[0.012] shadow-[inset_0_1px_rgba(255,255,255,0.012),inset_0_0_9rem_rgba(0,0,0,0.2)]"
-      />
     </section>
   );
 }

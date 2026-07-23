@@ -5,15 +5,25 @@ export function PortfolioSection() {
   return (
     <section
       id="projects"
-      className="relative isolate min-h-screen min-h-svh w-full overflow-hidden bg-[radial-gradient(circle_at_50%_43%,rgba(25,23,28,0.16),transparent_46%),linear-gradient(180deg,#0a0a0c_0%,#0b0b0d_100%)] before:pointer-events-none before:absolute before:inset-0 before:z-[-2] before:border before:border-white/[0.012] before:shadow-[inset_0_1px_rgba(255,255,255,0.012),inset_0_0_8rem_rgba(0,0,0,0.18)] before:content-['']"
+      className="relative isolate -mt-px min-h-screen min-h-svh w-full overflow-hidden bg-transparent"
       aria-labelledby="portfolio-title"
     >
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 z-[-1] bg-[repeating-radial-gradient(circle_at_0_0,transparent_0,rgba(255,255,255,0.34)_0.42px,transparent_0.72px,transparent_3px)] bg-[length:5px_5px] opacity-[0.016]"
+        className="pointer-events-none absolute inset-0 z-[-2] bg-[radial-gradient(circle_at_50%_43%,rgba(30,27,34,0.2),transparent_48%)]"
       />
 
       <PortfolioGallery />
+
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 top-0 z-20 h-[18vh] bg-[linear-gradient(180deg,#08080a_0%,rgba(8,8,10,0.8)_36%,transparent_100%)]"
+      />
+
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-[22vh] bg-[linear-gradient(180deg,transparent_0%,rgba(8,8,10,0.56)_48%,#08080a_100%)]"
+      />
 
       <div className="pointer-events-none absolute inset-0 z-40 text-center">
         <h2

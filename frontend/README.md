@@ -1,21 +1,25 @@
-# Hero Home — Ateliux Clean
+# Ateliux Landing — Hero + Portfolio Carousels
 
 Projeto completo em Next.js 16, React 19, TypeScript e Tailwind CSS v4.
 
-## Ajustes desta versão
+## Esta versão inclui
 
-- Logo branca da Ateliux no lugar do monograma antigo.
-- Poppins configurada como fonte principal com `next/font/google`.
-- Texto acima do título (`I AM`) convertido para texto HTML normal em Poppins, sem SVG, compressão ou achatamento.
-- Texto abaixo do título (`UI/UX DESIGNER`) aumentado e refinado para melhorar leitura e hierarquia.
-- Microtextos com peso, espaçamento entre letras, contraste e alinhamento mais limpos.
-- Título principal e composição visual original preservados.
-- Ícones de Facebook, Instagram e Twitter com 28 px.
-- Indicador `SCROLL` removido.
-- Estilos visuais escritos somente com classes Tailwind CSS.
-- `app/tailwind.css` contém apenas `@import "tailwindcss";`.
+- Hero principal com logo branca da Ateliux.
+- Poppins como fonte principal por `next/font/google`.
+- Header fixo com links `PROJECTS` e `CONTACT`.
+- Ícones sociais de Facebook, Instagram e Twitter.
+- Segunda seção `MY PORTFOLIO` fiel à composição visual enviada.
+- Três imagens independentes transformadas em carrosséis.
+- Cinco imagens em cada carrossel, totalizando quinze imagens.
+- O looping começa somente quando o mouse passa sobre a respectiva imagem.
+- O looping também funciona ao navegar por teclado e focar uma imagem.
+- Cada imagem se move discretamente para cima durante a interação.
+- Transição por crossfade, brilho e zoom interno sutil.
+- O card permanece recortado por `overflow-hidden`, evitando que a imagem escape de sua área.
+- O título, descrição e botão ficam em uma camada superior (`z-40`), sempre à frente das imagens.
+- Nenhum estilo visual personalizado em CSS global: apenas Tailwind CSS.
 
-## Estrutura
+## Estrutura principal
 
 ```text
 app/
@@ -26,15 +30,29 @@ components/
   home/
     hero/
       fitted-text.tsx
-      hero-header.tsx
       hero-identity.tsx
-      hero-socials.tsx
       home-hero.tsx
+    portfolio/
+      portfolio-carousel-card.tsx
+      portfolio-gallery.tsx
+      portfolio-section.tsx
+  layout/
+    site-header.tsx
+    site-socials.tsx
 content/
   home/
     hero.ts
+    portfolio.ts
 public/
   ateliux-logo-white.png
+```
+
+## Alterar as imagens
+
+As três listas, cada uma com cinco imagens, estão em:
+
+```text
+content/home/portfolio.ts
 ```
 
 ## Executar

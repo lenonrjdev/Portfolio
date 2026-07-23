@@ -1,6 +1,4 @@
-import { HeroHeader } from "./hero-header";
 import { HeroIdentity } from "./hero-identity";
-import { HeroSocials } from "./hero-socials";
 
 export function HomeHero() {
   return (
@@ -14,9 +12,7 @@ export function HomeHero() {
         aria-hidden="true"
       />
 
-      <HeroHeader />
       <HeroIdentity />
-      <HeroSocials />
     </section>
   );
 }

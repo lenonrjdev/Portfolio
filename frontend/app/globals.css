@@ -1,26 +1,437 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --hero-background: #0b0b0d;
+  --hero-foreground: #f7f7f8;
+  --hero-muted: #68686f;
+  --hero-faint: #55555b;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: var(--hero-background);
+  color: var(--hero-foreground);
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.home-hero {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 49%, rgba(24, 24, 28, 0.12), transparent 47%),
+    linear-gradient(180deg, #0c0c0e 0%, #0a0a0c 100%);
+}
+
+.home-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  border: 1px solid rgba(255, 255, 255, 0.012);
+  box-shadow:
+    inset 0 -1px rgba(255, 255, 255, 0.018),
+    inset 0 0 7rem rgba(0, 0, 0, 0.16);
+}
+
+.hero-noise {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.018;
+  background-image: repeating-radial-gradient(
+    circle at 0 0,
+    transparent 0,
+    rgba(255, 255, 255, 0.34) 0.42px,
+    transparent 0.72px,
+    transparent 3px
+  );
+  background-size: 5px 5px;
+}
+
+.hero-header,
+.hero-identity {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hero-header a,
+.hero-navigation,
+.hero-title {
+  pointer-events: auto;
+}
+
+.hero-monogram,
+.hero-navigation a,
+.hero-eyebrow,
+.hero-title,
+.hero-role {
+  position: absolute;
+  display: block;
+}
+
+.hero-monogram svg,
+.hero-navigation svg,
+.hero-eyebrow svg,
+.hero-title svg,
+.hero-role svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.hero-monogram text,
+.hero-title text {
+  fill: var(--hero-foreground);
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+.hero-navigation text,
+.hero-eyebrow text,
+.hero-role text {
+  fill: currentColor;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+/*
+ * Coordenadas desktop calibradas sobre a referência de 537 × 292 px.
+ * Cada valor abaixo preserva a mesma posição e proporção em qualquer desktop.
+ */
+.hero-monogram {
+  top: 4.11vh;
+  left: 3.35vw;
+  width: 5.77vw;
+  height: 4.79vh;
+  color: var(--hero-foreground);
+  transition: opacity 180ms ease;
+}
+
+.hero-monogram::before,
+.hero-navigation a::before,
+.hero-socials a::before,
+.hero-scroll-cue::before {
+  content: "";
+  position: absolute;
+  inset: -0.75rem;
+}
+
+.hero-monogram:hover {
+  opacity: 0.7;
+}
+
+.hero-navigation {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hero-navigation a {
+  top: 7.19vh;
+  height: 3.08vh;
+  color: var(--hero-muted);
+  pointer-events: auto;
+  transition: color 180ms ease;
+}
+
+.hero-navigation a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -0.55rem;
+  left: 0;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 180ms ease;
+}
+
+.hero-navigation a:hover {
+  color: #d5d5d8;
+}
+
+.hero-navigation a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.hero-nav-projects {
+  left: 81.75vw;
+  width: 6.33vw;
+}
+
+.hero-nav-contact {
+  left: 90.88vw;
+  width: 5.96vw;
+}
+
+.hero-title {
+  top: 42.47vh;
+  left: 25.51vw;
+  width: 45.62vw;
+  height: 13.7vh;
+  margin: 0;
+  color: var(--hero-foreground);
+}
+
+.hero-eyebrow {
+  top: 36.64vh;
+  left: 33.15vw;
+  width: 2.98vw;
+  height: 2.74vh;
+  color: #66666e;
+}
+
+.hero-role {
+  top: 58.9vh;
+  left: 55.12vw;
+  width: 10.43vw;
+  height: 3.08vh;
+  color: #73737a;
+}
+
+.hero-socials {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hero-socials a {
+  position: absolute;
+  left: 3.35vw;
+  display: grid;
+  width: 1.49vw;
+  height: 2.74vh;
+  min-width: 0.5rem;
+  min-height: 0.5rem;
+  place-items: center;
+  color: #77777e;
+  pointer-events: auto;
+  transition: color 180ms ease, transform 180ms ease;
+}
+
+.hero-socials a:nth-child(1) {
+  top: 81.85vh;
+}
+
+.hero-socials a:nth-child(2) {
+  top: 85.27vh;
+}
+
+.hero-socials a:nth-child(3) {
+  top: 89.73vh;
+}
+
+.hero-socials a:hover {
+  color: #ededee;
+  transform: translateX(2px);
+}
+
+.hero-socials svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.45;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.hero-socials .social-icon-fill {
+  fill: currentColor;
+  stroke: none;
+}
+
+.hero-socials .social-dot {
+  fill: currentColor;
+  stroke: none;
+}
+
+.hero-scroll-cue {
+  position: absolute;
+  top: 79.11vh;
+  left: 96.65vw;
+  width: 0.93vw;
+  height: 13.7vh;
+  color: var(--hero-faint);
+  z-index: 2;
+}
+
+.hero-scroll-cue span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  font-size: clamp(0.38rem, 0.72vh, 0.52rem);
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  line-height: 1;
+  text-align: center;
+  writing-mode: vertical-rl;
+}
+
+.hero-scroll-cue i {
+  position: absolute;
+  top: 9.25vh;
+  left: 50%;
+  width: 1px;
+  height: 4.45vh;
+  background: #707077;
+  opacity: 0.72;
+  transform: translateX(-50%);
+  transform-origin: top;
+  animation: scroll-line 2.4s ease-in-out infinite;
+}
+
+@keyframes scroll-line {
+  0%,
+  100% {
+    transform: translateX(-50%) scaleY(0.55);
+    opacity: 0.25;
+  }
+
+  50% {
+    transform: translateX(-50%) scaleY(1);
+    opacity: 0.8;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hero-scroll-cue i {
+    animation: none;
+  }
+}
+
+/* Ajuste de leitura para tablet e celular sem alterar a composição desktop. */
+@media (max-width: 767px) {
+  .hero-monogram {
+    top: 1.35rem;
+    left: 1.25rem;
+    width: 3.9rem;
+    height: 1.8rem;
+  }
+
+  .hero-navigation a {
+    top: 1.65rem;
+    height: 0.75rem;
+  }
+
+  .hero-nav-projects {
+    left: auto;
+    right: 5.3rem;
+    width: 3rem;
+  }
+
+  .hero-nav-contact {
+    left: auto;
+    right: 1.25rem;
+    width: 2.65rem;
+  }
+
+  .hero-title {
+    top: 43.5%;
+    left: 5%;
+    width: 90%;
+    height: 12.8%;
+  }
+
+  .hero-eyebrow {
+    top: 38.2%;
+    left: 19%;
+    width: 2.4rem;
+    height: 0.85rem;
+  }
+
+  .hero-role {
+    top: 57.5%;
+    left: auto;
+    right: 8%;
+    width: 5.6rem;
+    height: 0.9rem;
+  }
+
+  .hero-socials a {
+    left: 1.25rem;
+    width: 0.78rem;
+    height: 0.78rem;
+  }
+
+  .hero-socials a:nth-child(1) {
+    top: auto;
+    bottom: 4.3rem;
+  }
+
+  .hero-socials a:nth-child(2) {
+    top: auto;
+    bottom: 2.95rem;
+  }
+
+  .hero-socials a:nth-child(3) {
+    top: auto;
+    bottom: 1.6rem;
+  }
+
+  .hero-scroll-cue {
+    top: auto;
+    bottom: 1.45rem;
+    left: auto;
+    right: 1.05rem;
+    width: 0.6rem;
+    height: 5.5rem;
+  }
+
+  .hero-scroll-cue i {
+    top: 3.7rem;
+    height: 1.8rem;
+  }
 }

@@ -1,20 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { Poppins } from "next/font/google";
+import "./tailwind.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const poppins = Poppins({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
+  display: "swap",
+  variable: "--font-poppins",
 });
 
 export const metadata: Metadata = {
-  title: "Create Portfolio App",
-  description: "Criado por Lenon Alexandre da Cunha",
+  title: "Ateliux — UI/UX Designer",
+  description: "Portfolio landing page da Ateliux.",
 };
 
 export default function RootLayout({
@@ -24,10 +21,12 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="pt-br"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      lang="pt-BR"
+      className={`${poppins.variable} scroll-smooth motion-reduce:scroll-auto`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="m-0 bg-[#0b0b0d] font-[family-name:var(--font-poppins)] text-[#f7f7f8] antialiased [text-rendering:geometricPrecision]">
+        {children}
+      </body>
     </html>
   );
 }

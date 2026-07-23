@@ -1,59 +1,14 @@
-# Ateliux Landing — Hero + Portfolio Carousels
+# Ateliux Landing Page — Hero, Portfolio e Design Showcase Clean
 
-Projeto completo em Next.js 16, React 19, TypeScript e Tailwind CSS v4.
+Landing page em Next.js 16, React 19, TypeScript, Tailwind CSS v4 e Poppins.
 
-## Esta versão inclui
+## Seções
 
-- Hero principal com logo branca da Ateliux.
-- Poppins como fonte principal por `next/font/google`.
-- Header fixo com links `PROJECTS` e `CONTACT`.
-- Ícones sociais de Facebook, Instagram e Twitter.
-- Segunda seção `MY PORTFOLIO` fiel à composição visual enviada.
-- Três imagens independentes transformadas em carrosséis.
-- Cinco imagens em cada carrossel, totalizando quinze imagens.
-- O looping começa somente quando o mouse passa sobre a respectiva imagem.
-- O looping também funciona ao navegar por teclado e focar uma imagem.
-- Cada imagem se move discretamente para cima durante a interação.
-- Transição por crossfade, brilho e zoom interno sutil.
-- O card permanece recortado por `overflow-hidden`, evitando que a imagem escape de sua área.
-- O título, descrição e botão ficam em uma camada superior (`z-40`), sempre à frente das imagens.
-- Nenhum estilo visual personalizado em CSS global: apenas Tailwind CSS.
+1. Hero principal da Ateliux.
+2. Portfólio com três carrosséis independentes de cinco imagens.
+3. Design Showcase inspirado na referência enviada, com fundo preto, conteúdo editorial à esquerda, título vertical central e retrato monocromático à direita. Nesta versão, toda a escala tipográfica foi reduzida e os pesos, contrastes e espaçamentos foram refinados para uma composição mais clean.
 
-## Estrutura principal
-
-```text
-app/
-  layout.tsx
-  page.tsx
-  tailwind.css
-components/
-  home/
-    hero/
-      fitted-text.tsx
-      hero-identity.tsx
-      home-hero.tsx
-    portfolio/
-      portfolio-carousel-card.tsx
-      portfolio-gallery.tsx
-      portfolio-section.tsx
-  layout/
-    site-header.tsx
-    site-socials.tsx
-content/
-  home/
-    hero.ts
-    portfolio.ts
-public/
-  ateliux-logo-white.png
-```
-
-## Alterar as imagens
-
-As três listas, cada uma com cinco imagens, estão em:
-
-```text
-content/home/portfolio.ts
-```
+A terceira seção não adiciona menu, ícones sociais ou controles laterais próprios. Ela reutiliza somente a identidade fixa global do projeto e não possui a seta lateral da referência.
 
 ## Executar
 
@@ -62,4 +17,21 @@ npm install
 npm run dev
 ```
 
-Abra `http://localhost:3000`.
+Acesse `http://localhost:3000`.
+
+## Organização principal
+
+```text
+app/
+components/
+  home/
+    hero/
+    portfolio/
+    design/
+  layout/
+content/
+  home/
+public/
+```
+
+Todo o estilo visual é aplicado com classes Tailwind nos componentes. O arquivo `app/tailwind.css` contém apenas a importação do Tailwind.

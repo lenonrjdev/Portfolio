@@ -43,41 +43,41 @@ export function DesignShowcaseSection() {
         />
       </div>
 
-      <div className="relative z-10 flex min-h-screen min-h-svh items-center pl-[10.8vw] pr-[5vw] max-lg:pl-[9vw] max-md:items-end max-md:px-6 max-md:pb-[15vh]">
-        <div className="relative w-[45vw] max-w-[820px] -translate-y-[1.6vh] max-lg:w-[50vw] max-md:w-full max-md:translate-y-0">
+      <div className="relative z-10 flex min-h-screen min-h-svh items-center pl-[11.4vw] pr-[5vw] max-lg:pl-[9.5vw] max-md:items-end max-md:px-6 max-md:pb-[15vh]">
+        <div className="relative w-[39vw] max-w-[680px] -translate-y-[1vh] max-lg:w-[46vw] max-md:w-full max-md:translate-y-0">
           <div
             aria-hidden="true"
-            className="mb-[6.1vh] h-px w-[3.8vw] min-w-10 bg-[#ba4e2f]/75 max-md:mb-8"
+            className="mb-[4.8vh] h-px w-[2.8vw] min-w-8 bg-[#ba4e2f]/75 max-md:mb-8"
           />
 
-          <p className="m-0 text-[clamp(11px,0.78vw,15px)] font-normal leading-none tracking-[-0.01em] text-white/66">
+          <p className="m-0 text-[clamp(9px,0.62vw,12px)] font-normal uppercase leading-none tracking-[0.08em] text-white/52">
             {designShowcaseContent.eyebrow}
           </p>
 
           <h2
             id="design-showcase-title"
-            className="mt-[1.15vh] mb-0 text-[clamp(29px,2.35vw,49px)] font-normal leading-[1.08] tracking-[-0.045em] text-[#f0f0f2]"
+            className="mt-[1.35vh] mb-0 text-[clamp(24px,1.9vw,38px)] font-normal leading-[1.12] tracking-[-0.03em] text-white/90"
           >
             {designShowcaseContent.heading}
           </h2>
 
-          <div className="relative mt-[2.5vh] flex items-center max-md:mt-4">
+          <div className="relative mt-[2.8vh] flex items-center max-md:mt-5">
             <p
               aria-hidden="true"
-              className="m-0 whitespace-nowrap text-[clamp(64px,7.55vw,145px)] font-light uppercase leading-[0.82] tracking-[-0.055em] text-transparent [-webkit-text-stroke:1px_rgba(219,219,222,0.34)] [text-shadow:0_0_36px_rgba(255,255,255,0.018)] max-md:text-[clamp(58px,18vw,92px)]"
+              className="m-0 whitespace-nowrap text-[clamp(50px,5.8vw,112px)] font-light uppercase leading-[0.88] tracking-[-0.045em] text-transparent [-webkit-text-stroke:0.8px_rgba(219,219,222,0.28)] [text-shadow:0_0_28px_rgba(255,255,255,0.012)] max-md:text-[clamp(46px,14vw,76px)]"
             >
               {designShowcaseContent.displayWord}
             </p>
 
             <span
               aria-hidden="true"
-              className="ml-[2.4vw] mt-[1.4vh] block h-px w-[3.2vw] min-w-9 bg-[#ad472d]/75 max-md:hidden"
+              className="ml-[1.8vw] mt-[1vh] block h-px w-[2.5vw] min-w-7 bg-[#ad472d]/75 max-md:hidden"
             />
           </div>
 
           <a
             href={designShowcaseContent.action.href}
-            className="group mt-[6.7vh] inline-flex items-center gap-[1.2vw] text-[clamp(10px,0.66vw,13px)] font-normal tracking-[-0.01em] text-white/72 no-underline transition-colors duration-300 hover:text-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white/45 max-md:mt-9 max-md:gap-4"
+            className="group mt-[5.2vh] inline-flex items-center gap-[0.9vw] text-[clamp(9px,0.56vw,11px)] font-normal uppercase tracking-[0.08em] text-white/58 no-underline transition-colors duration-300 hover:text-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white/45 max-md:mt-9 max-md:gap-4"
           >
             <span>{designShowcaseContent.action.label}</span>
 
@@ -88,16 +88,16 @@ export function DesignShowcaseSection() {
               {Array.from({ length: 6 }).map((_, index) => (
                 <span
                   key={index}
-                  className="block h-[2px] w-[2px] rounded-full bg-[#ba4e2f]/55 transition-all duration-300 group-hover:bg-[#d75f39]"
+                  className="block h-[1.5px] w-[1.5px] rounded-full bg-[#ba4e2f]/45 transition-all duration-300 group-hover:bg-[#d75f39]"
                 />
               ))}
             </span>
 
             <span
               aria-hidden="true"
-              className="relative grid h-[18px] w-[18px] place-items-center rounded-full border border-[#b74a2d]/80 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:rotate-90"
+              className="relative grid h-[16px] w-[16px] place-items-center rounded-full border border-[#b74a2d]/80 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:rotate-90"
             >
-              <span className="block h-[5px] w-[5px] rounded-full bg-[#c75331]" />
+              <span className="block h-[4px] w-[4px] rounded-full bg-[#c75331]" />
             </span>
           </a>
         </div>
@@ -105,9 +105,9 @@ export function DesignShowcaseSection() {
 
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute left-[50.4%] top-1/2 z-20 flex -translate-x-1/2 -translate-y-1/2 items-center max-lg:left-[52%] max-md:left-auto max-md:right-[3vw] max-md:top-[46%] max-md:translate-x-0"
+        className="pointer-events-none absolute left-[50.8%] top-1/2 z-20 flex -translate-x-1/2 -translate-y-1/2 items-center max-lg:left-[52%] max-md:left-auto max-md:right-[3vw] max-md:top-[46%] max-md:translate-x-0"
       >
-        <div className="relative -rotate-90 whitespace-nowrap text-[clamp(54px,6.25vw,120px)] font-semibold leading-none tracking-[-0.06em] text-[#f4f4f5] [text-shadow:0_8px_26px_rgba(0,0,0,0.42)] max-md:text-[clamp(45px,14vw,78px)]">
+        <div className="relative -rotate-90 whitespace-nowrap text-[clamp(44px,5vw,96px)] font-medium leading-none tracking-[-0.045em] text-white/92 [text-shadow:0_8px_26px_rgba(0,0,0,0.42)] max-md:text-[clamp(38px,11vw,66px)]">
           <span>{designShowcaseContent.verticalWord}</span>
           <span className="ml-[0.07em] text-[#f05b2a]">.</span>
         </div>
@@ -115,7 +115,7 @@ export function DesignShowcaseSection() {
 
       <p
         aria-hidden="true"
-        className="absolute bottom-[8.6vh] left-[46.95%] z-20 m-0 -rotate-90 whitespace-nowrap text-[clamp(7px,0.46vw,9px)] font-normal tracking-[0.08em] text-white/33 max-lg:left-[48.5%] max-md:hidden"
+        className="absolute bottom-[9.4vh] left-[47.4%] z-20 m-0 -rotate-90 whitespace-nowrap text-[clamp(6px,0.38vw,8px)] font-normal tracking-[0.12em] text-white/24 max-lg:left-[48.5%] max-md:hidden"
       >
         {designShowcaseContent.date}
       </p>

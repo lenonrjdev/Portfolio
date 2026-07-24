@@ -1,26 +1,26 @@
 export const heroContent = {
-  eyebrow: "I AM",
-  name: "HARUN",
-  role: "UI/UX DESIGNER",
+  eyebrow: "EU SOU",
+  name: "LENON",
+  role: "DESENVOLVEDOR FULL STACK",
   navigation: [
-    { label: "PROJECTS", href: "#projects" },
-    { label: "CONTACT", href: "#contact" },
+    { label: "PROJETOS", href: "#projects" },
+    { label: "CONTATO", href: "#contact" },
   ],
   socials: [
     {
       name: "facebook",
       label: "Facebook",
-      href: "https://www.facebook.com/",
+      href: "https://www.facebook.com/lenon.uzi",
     },
     {
       name: "instagram",
       label: "Instagram",
-      href: "https://www.instagram.com/",
+      href: "https://www.instagram.com/lenonrj.dev/",
     },
     {
       name: "twitter",
       label: "Twitter",
-      href: "https://twitter.com/",
+      href: "https://x.com/lenonrjdev",
     },
   ],
 } as const;

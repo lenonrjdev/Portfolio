@@ -1,0 +1,283 @@
+import { ateliuxCaseContent } from "@/content/home/ateliux-case";
+
+export function AteliuxCaseSection() {
+  return (
+    <section
+      id="ateliux"
+      aria-labelledby="ateliux-case-title"
+      className="
+        relative
+        -mt-px
+        min-h-svh
+        overflow-hidden
+        bg-transparent
+        text-white
+      "
+    >
+      {/* Continuidade entre as seções */}
+      <div
+        aria-hidden="true"
+        className="
+          pointer-events-none
+          absolute
+          inset-x-0
+          top-0
+          z-0
+          h-40
+          bg-gradient-to-b
+          from-[#08080a]
+          via-[#08080a]/75
+          to-transparent
+        "
+      />
+
+      <div
+        aria-hidden="true"
+        className="
+          pointer-events-none
+          absolute
+          inset-x-0
+          bottom-0
+          z-0
+          h-40
+          bg-gradient-to-t
+          from-[#08080a]
+          via-[#08080a]/75
+          to-transparent
+        "
+      />
+
+      {/* Iluminação central extremamente discreta */}
+      <div
+        aria-hidden="true"
+        className="
+          pointer-events-none
+          absolute
+          inset-0
+          z-0
+          bg-[radial-gradient(circle_at_47%_48%,rgba(255,255,255,0.025),transparent_46%)]
+        "
+      />
+
+      {/* Palavra de fundo */}
+      <div
+        aria-hidden="true"
+        className="
+          pointer-events-none
+          absolute
+          left-[4vw]
+          top-1/2
+          z-0
+          -translate-y-1/2
+          select-none
+          whitespace-nowrap
+          text-[clamp(180px,30vw,580px)]
+          font-semibold
+          leading-none
+          tracking-[-0.1em]
+          text-transparent
+          opacity-70
+          [-webkit-text-stroke:1px_rgba(255,255,255,0.035)]
+        "
+      >
+        {ateliuxCaseContent.backgroundWord}
+      </div>
+
+      <div
+        className="
+          relative
+          z-10
+          mx-auto
+          flex
+          min-h-svh
+          w-full
+          max-w-[1920px]
+          flex-col
+          px-[clamp(28px,8vw,154px)]
+          pb-[clamp(38px,5vw,84px)]
+          pt-[clamp(100px,13vh,160px)]
+        "
+      >
+        {/* Conteúdo principal */}
+        <div
+          className="
+            ml-[clamp(0px,9vw,170px)]
+            mt-[clamp(20px,8vh,100px)]
+            max-w-[850px]
+            max-lg:ml-0
+          "
+        >
+          <p
+            className="
+              mb-[clamp(14px,1.4vw,24px)]
+              text-[clamp(9px,0.62vw,12px)]
+              font-medium
+              uppercase
+              leading-none
+              tracking-[0.16em]
+              text-white/45
+            "
+          >
+            {ateliuxCaseContent.eyebrow}
+          </p>
+
+          <h2
+            id="ateliux-case-title"
+            className="
+              max-w-[820px]
+              text-balance
+              text-[clamp(40px,4.8vw,88px)]
+              font-semibold
+              leading-[0.98]
+              tracking-[-0.055em]
+              text-[#f2f2f2]
+            "
+          >
+            {ateliuxCaseContent.title.map((line) => (
+              <span key={line} className="block">
+                {line}
+              </span>
+            ))}
+          </h2>
+
+          <a
+            href={ateliuxCaseContent.projectLink.href}
+            className="
+              group
+              mt-[clamp(36px,4vw,64px)]
+              inline-flex
+              flex-col
+              text-[clamp(10px,0.68vw,13px)]
+              font-medium
+              tracking-[-0.01em]
+              text-white/75
+              transition-colors
+              duration-300
+              hover:text-white
+              focus-visible:text-white
+              focus-visible:outline-none
+            "
+          >
+            <span>{ateliuxCaseContent.projectLink.label}</span>
+
+            <span
+              aria-hidden="true"
+              className="
+                mt-3
+                h-px
+                w-full
+                origin-left
+                bg-white/50
+                transition-transform
+                duration-500
+                ease-[cubic-bezier(0.22,1,0.36,1)]
+                group-hover:scale-x-75
+                group-focus-visible:scale-x-75
+              "
+            />
+          </a>
+        </div>
+
+        {/* Informações inferiores */}
+        <div
+          className="
+            mt-auto
+            grid
+            w-full
+            grid-cols-[minmax(0,1fr)_minmax(0,1fr)_auto]
+            items-end
+            gap-[clamp(36px,6vw,120px)]
+            pl-[clamp(0px,9vw,170px)]
+            max-lg:grid-cols-2
+            max-lg:pl-0
+            max-md:grid-cols-1
+          "
+        >
+          {ateliuxCaseContent.highlights.map((highlight) => (
+            <article key={highlight.title} className="max-w-[290px]">
+              <h3
+                className="
+                  text-[clamp(9px,0.58vw,11px)]
+                  font-medium
+                  leading-[1.35]
+                  tracking-[-0.01em]
+                  text-white/75
+                "
+              >
+                {highlight.title}
+              </h3>
+
+              <p
+                className="
+                  mt-2
+                  text-[clamp(8px,0.52vw,10px)]
+                  font-normal
+                  leading-[1.65]
+                  text-white/30
+                "
+              >
+                {highlight.description}
+              </p>
+            </article>
+          ))}
+
+          {/* Botão movido do topo para a parte inferior */}
+          <a
+            id="contact"
+            href={ateliuxCaseContent.contact.href}
+            className="
+              group
+              relative
+              inline-flex
+              h-[clamp(44px,3.2vw,56px)]
+              min-w-[clamp(146px,11vw,190px)]
+              items-center
+              justify-center
+              overflow-hidden
+              border
+              border-white/15
+              px-7
+              text-[clamp(8px,0.5vw,10px)]
+              font-medium
+              uppercase
+              tracking-[0.13em]
+              text-white/70
+              transition-colors
+              duration-500
+              hover:border-white/40
+              hover:text-black
+              focus-visible:border-white/40
+              focus-visible:text-black
+              focus-visible:outline-none
+              max-lg:col-span-2
+              max-lg:justify-self-end
+              max-md:col-span-1
+              max-md:mt-4
+              max-md:justify-self-start
+            "
+          >
+            <span
+              aria-hidden="true"
+              className="
+                absolute
+                inset-0
+                origin-bottom
+                scale-y-0
+                bg-white
+                transition-transform
+                duration-500
+                ease-[cubic-bezier(0.22,1,0.36,1)]
+                group-hover:scale-y-100
+                group-focus-visible:scale-y-100
+              "
+            />
+
+            <span className="relative z-10">
+              {ateliuxCaseContent.contact.label}
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}

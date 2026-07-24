@@ -1,8 +1,11 @@
+import { AteliuxCaseSection } from "@/components/home/ateliux-case/ateliux-case-section";
 import { DesignShowcaseSection } from "@/components/home/design/design-showcase-section";
 import { HomeHero } from "@/components/home/hero/home-hero";
 import { PortfolioSection } from "@/components/home/portfolio/portfolio-section";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteSocials } from "@/components/layout/site-socials";
+import { NavigationShowcaseSection } from "@/components/home/navigation/navigation-showcase-section";
+import { SiteFooter } from "@/components/layout/site-footer";
 
 export default function HomePage() {
   return (
@@ -25,6 +28,9 @@ export default function HomePage() {
           <HomeHero />
           <PortfolioSection />
           <DesignShowcaseSection />
+          <AteliuxCaseSection />
+          <NavigationShowcaseSection />
+          <SiteFooter />
         </div>
       </main>
     </>

@@ -1,34 +1,34 @@
 export const ateliuxCaseContent = {
-  eyebrow: "Featured project",
+  eyebrow: "Projeto em Destaque",
 
   title: [
-    "Software design &",
-    "engineering company",
-    "from Brazil.",
+    "Ui / Ux Designer &",
+    "Engenheiro Full Stack",
+    "do Brasil.",
   ],
 
   backgroundWord: "Ateliux",
 
   projectLink: {
-    label: "See our recent work",
+    label: "Ver Trabalho Recente",
     href: "#portfolio",
   },
 
   highlights: [
     {
-      title: "A creative technology company",
+      title: "Uma empresa de tecnologia criativa",
       description:
-        "We design digital products that transform ideas into real businesses.",
+        "Criamos produtos digitais que transformam ideias em negócios reais.",
     },
     {
-      title: "Strategy, design and code",
+      title: "Estratégia, design e código",
       description:
-        "We connect creativity, technology and execution to build useful solutions.",
+        "Conectamos criatividade, tecnologia e execução para construir soluções úteis.",
     },
   ],
 
   contact: {
-    label: "Get in touch",
+    label: "Entrar em Contato",
     href: "#contact",
   },
 } as const;

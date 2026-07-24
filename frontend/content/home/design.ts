@@ -1,13 +1,13 @@
 export const designShowcaseContent = {
-  eyebrow: "Love on UI & UX",
-  heading: "Design Technology.",
-  displayWord: "DESIGN",
-  verticalWord: "Brands",
+  eyebrow: "a study of form and space in",
+  heading: "contemporary art.",
+  displayWord: "ATELIUX",
+  verticalWord: "Design",
   action: {
-    label: "About us",
+    label: "Sobre a Arte.",
     href: "#contact",
   },
-  date: "26·03·2018",
+  date: "13·03·2001",
   image: {
     src: "https://images.unsplash.com/photo-1578758837674-93ed0ab5fbab?auto=format&fit=crop&w=1800&q=88",
     alt: "Retrato editorial de um profissional usando terno",

@@ -1,34 +1,33 @@
 export const footerContent = {
   testimonial: {
-    text: "Whether you're looking to build a stunning website, boost your brand, or drive measurable results, we're here to help.",
-    author: "George Stern",
-    role: "Client Success Manager",
-    phone: "(312) 555-2468",
-    email: "hello@ateliux.com",
+    text: "Seja para criar um site impressionante, fortalecer sua marca ou gerar resultados mensuráveis, estamos aqui para ajudar.",
+    author: "Lenon Cunha",
+    role: "Ceo & Fundador Ateliux Studio",
+    email: "contato@ateliux.com.br",
   },
 
   newsletter: {
-    title: "Newsletter",
+    title: "Assine Nossa Plataforma",
     description:
-      "Join our newsletter and stay updated on the latest trends in digital design.",
+      "Faça parte da nossa comunidade Ateliux, e receba atualizações ou crie um projeto conosco.",
     fields: {
-      name: "Your name *",
-      email: "E-mail *",
+      name: "Seu Nome *",
+      email: "Seu Email *",
     },
-    button: "Subscribe",
+    button: "Inscreva-se",
   },
 
   navigation: [
     { label: "Home", href: "#top" },
-    { label: "Studio", href: "#about" },
-    { label: "Projects", href: "#projects" },
-    { label: "Blog", href: "#blog" },
+    { label: "Projetos", href: "#about" },
+    { label: "Sobre", href: "#projects" },
+    { label: "Experiência", href: "#blog" },
   ],
 
   socials: [
-    { label: "Twitter", href: "https://twitter.com/" },
-    { label: "Instagram", href: "https://instagram.com/" },
-    { label: "Dribbble", href: "https://dribbble.com/" },
+    { label: "Twitter", href: "https://twitter.com/ateliux" },
+    { label: "Instagram", href: "https://instagram.com/ateliux" },
+    { label: "Facebook", href: "https://facebook.com/ateliux" },
   ],
 
   brand: {

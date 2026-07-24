@@ -1,15 +1,15 @@
 export const navigationShowcaseContent = {
   navigation: [
     {
-      label: "WORK",
+      label: "PROJETOS",
       href: "#projects",
     },
     {
-      label: "ABOUT",
+      label: "SOBRE",
       href: "#about",
     },
     {
-      label: "PLAYGROUND",
+      label: "EXPERIÊNCIA",
       href: "#design",
     },
     {
@@ -17,7 +17,7 @@ export const navigationShowcaseContent = {
       href: "#stack",
     },
     {
-      label: "CONTACT",
+      label: "CONTATO",
       href: "#contact",
     },
   ],

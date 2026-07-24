@@ -1,8 +1,8 @@
 export const portfolioContent = {
-  title: "MY PORTFOLIO",
-  description: "HELLO I AM HARUN ERDOGAN UI/UX DESIGNER.",
+  title: "Meu Trabalho",
+  description: "OLÁ, EU SOU O LENON, UM DESENVOLVEDOR FULL STACK.",
   callToAction: {
-    label: "VIEW PROJECT",
+    label: "VER PROJETO",
     href: "#portfolio-grid",
   },
   carousels: [
